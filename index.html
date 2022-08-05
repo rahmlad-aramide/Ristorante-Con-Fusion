@@ -44,10 +44,15 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm-3">
                     <div class="col-12 col-sm align-self-center">
                         <img src="img/logo.png" class="img-fluid">
                     </div>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <a href="#reserve" class="btn btn-warning">
+                        Reserve Table
+                    </a>
                 </div>
             </div>
         </div>
@@ -81,7 +86,7 @@
             <div class="col col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2>Weekend Grand Buffet</h2>
+                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                         <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
                     <img src="img/buffet.png" alt="Grand Buffet" class="d-flex ml-3 img-thumbnail align-self-center">
@@ -109,6 +114,47 @@
                 </div>
             </div>
         </div>
+        <div class="row my-5 mx-2" id="reserve">
+            <div class="col-12 offset-md-3 col-md-7 card px-0">
+                <div class="card-head bg-warning pl-2">
+                   <h4 class="text-white">
+                       Reserve a Table
+                   </h4> 
+                </div>
+                <div class="card-body">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-12 col-sm-3">
+                                <label for="guests">Number of Guests</label>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input class="col-1" type="radio" name="guests" id="1"> <span>1</span>
+                                <input class="col-1" type="radio" name="guests" id="2"> <span>2</span>
+                                <input class="col-1" type="radio" name="guests" id="3"> <span>3</span>
+                                <input class="col-1" type="radio" name="guests" id="4"> <span>4</span>
+                                <input class="col-1" type="radio" name="guests" id="5"> <span>5</span>
+                                <input class="col-1" type="radio" name="guests" id="6"> <span>6</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-3">
+                                <label for="date">Date and Time</label>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <input class="col-12" type="text" name="time" id="date" placeholder="Time">
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <input class="col-12" type="text" name="date" id="date" placeholder="Date">
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-primary text-white offset-0 offset-sm-3 my-2">Reserve</a>
+                        </div>
+                    </form>
+                </div>    
+            </div>
+        </div>
+
     </main>
 
     <footer class="footer">
