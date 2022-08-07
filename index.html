@@ -90,9 +90,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-3">
-                    <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning text-white"
+                         href="#reserve" data-toggle="modal">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -127,6 +126,7 @@
                             src="img/alberto.png" alt="Alberto Somayya">
                         <div class="carousel-caption d-none d-md-block">
                             <h2 class="mt-0">Alberto Somayya</h2>
+                            <h4>Executive Chef</h4>
                         <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
                             International experience having worked closely with
                             whos-who in the culinary world, he specializes in
@@ -140,6 +140,14 @@
                         <li data-target="#mycarousel" data-slide-to="1"></li>
                         <li data-target="#mycarousel" data-slide-to="2"></li>
                     </ol>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -207,7 +215,7 @@
         
         
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="reserve" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -320,7 +328,13 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();
+                $("#mycarousel").carousel( { interval: 2000 } );
+                $("#carousel-pause").click(function(){
+                    $("#mycarousel").carousel('pause');
+                });
+                $("#carousel-play").click(function(){
+                    $("#mycarousel").carousel('cycle');
+                });
             });
         </script>
 
